@@ -1,4 +1,7 @@
 tasks:
   - init: npm install
+  - command: npm i webpack
+  - command: npm i webpack-cli
+  - command: webpack -w
 image:
   file: .gitpod.Dockerfile
