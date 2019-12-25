@@ -1,0 +1,11 @@
+{
+  "name": "react-tests",
+  "description": "Testes com ReacJS",
+  "version": "0.0.1",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/reactjs/reactjs.org"
+  },
+  "dependencies": {
+  }
+}
