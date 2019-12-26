@@ -7,5 +7,28 @@
     "url": "https://github.com/reactjs/reactjs.org"
   },
   "dependencies": {
-  }
+    "babel": "^6.23.0",
+    "bootstrap": "^4.4.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "main": "index.js",
+  "devDependencies": {
+    "webpack": "^4.41.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RodriAndreotti/reactjs-tests.git"
+  },
+  "keywords": [
+    "testes",
+    "reacjs"
+  ],
+  "author": "Rodrigo Teixeira Andreotti",
+  "license": "ISC",
+  "homepage": "https://github.com/RodriAndreotti/reactjs-tests#readme"
 }
