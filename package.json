@@ -8,10 +8,12 @@
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
+    "css-loader": "^3.4.0",
     "jquery": "^3.4.1",
     "popper": "^1.0.1",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "style-loader": "^1.1.2"
   },
   "main": "js/app.min.js",
   "devDependencies": {

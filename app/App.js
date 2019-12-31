@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 class ProductCategoryRow extends React.Component {
     render() {
@@ -8,7 +10,7 @@ class ProductCategoryRow extends React.Component {
 
         return (
             <tr>
-                <th colspan="2">{categoria}</th>
+                <th colSpan="2">{categoria}</th>
             </tr>
         );
     }
@@ -19,7 +21,7 @@ class ProductRow extends React.Component {
         const produto = this.props.produto;
         const nome = produto.stocked ? 
         produto.nome : 
-            <span class='text-danger'>
+            <span className='text-danger'>
                 {produto.nome}
             </span>;
 
@@ -52,14 +54,14 @@ class ProductTable extends React.Component {
 
             rows.push(<ProductRow 
                 produto={produto}
-                key={produto.name} />
+                key={produto.nome} />
             );
             
             ultimaCategoria = produto.category;
         });
 
         return (
-            <table class="table table-responsive table-striped">
+            <table className="table table-responsive table-striped">
                 <thead>
                     <tr>
                         <th>Nome</th>
@@ -78,14 +80,18 @@ class SearchBar extends React.Component {
     render() {
         return (
             <form>
-                <input type="text" placeholder="Procurar..."/>
-                <p>
-                    <label>
-                        <input type="checkbox"/>
-                        {' '}
+                <div className="form-group">
+                    <input type="text" className="form-control" placeholder="Procurar..."/>
+                </div>
+                
+                <div className="form-check">
+                   
+                    <input type="checkbox" className="form-check-input" id="somenteEstoque"/>
+                    {' '}
+                    <label className="form-check-label" htmlFor="somenteEstoque">
                         Mostrar somente produtos em estoque
                     </label>
-                </p>
+                </div>
             </form>
         );
     }
@@ -103,12 +109,12 @@ class FilterableProductTable extends React.Component {
 }
 
 const PRODUTOS = [
-  {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
-  {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
-  {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
-  {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
-  {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
-  {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+  {category: 'Sporting Goods', price: '$49.99', stocked: true, nome: 'Football'},
+  {category: 'Sporting Goods', price: '$9.99', stocked: true, nome: 'Baseball'},
+  {category: 'Sporting Goods', price: '$29.99', stocked: false, nome: 'Basketball'},
+  {category: 'Electronics', price: '$99.99', stocked: true, nome: 'iPod Touch'},
+  {category: 'Electronics', price: '$399.99', stocked: false, nome: 'iPhone 5'},
+  {category: 'Electronics', price: '$199.99', stocked: true, nome: 'Nexus 7'}
 ];
 
 ReactDOM.render(

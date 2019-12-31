@@ -13,6 +13,12 @@ module.exports = {
         filename: "app.min.js"
   },
   module: {
+    resolve: {
+        extensions: ['', '.js', '.jsx', '.css'],
+        modulesDirectories: [
+          'node_modules'
+        ]        
+    },
     rules: [
       {
         test: /\.jsx?$/,
@@ -23,7 +29,11 @@ module.exports = {
                presets: ['@babel/preset-env','@babel/preset-react']
             }
         }
-      }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
     ]
   },
   plugins: debug ? [] : [
