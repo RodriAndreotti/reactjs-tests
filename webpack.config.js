@@ -5,21 +5,23 @@ var path = require('path');
 
 module.exports = {
     context: path.join(__dirname, "app"),
-  devtool: debug ? "inline-sourcemap" : null,
-  entry: "./app/App.js",
-  output: {
-    path: __dirname + "/public/assets/js/",
-    publicPath: "/js/",
-    filename: "app.min.js"
+    devtool: debug ? "inline-sourcemap" : null,
+    entry: "../app/App.js",
+    output: {
+        path: __dirname + "/public/assets/js/",
+        publicPath: "/js/",
+        filename: "app.min.js"
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          presets: ['react', 'es2015', 'stage-0']
+        use: {
+            loader: 'babel-loader',
+            options: {
+               presets: ['@babel/preset-env','@babel/preset-react']
+            }
         }
       }
     ]

@@ -1,15 +1,8 @@
 tasks:
-  - init: npm install
-  - command: npm install npm -g
-  - command: npm start
-  - command: npm install -g create-react-app
-  - command: npm i webpack -g
-  - command: npm i webpack-cli -g
-  - command: webpack -w
-  - command: npm start
-  - command: npm serve
+  - init: npm install npm -g 
+  - command:  npm install npm -g && npm install && npm i webpack -g && npm i webpack-cli -g npm i -D webpack-cli && npm run dev
 ports:
   - port: 3000
-    onOpen: open-browser
+    onOpen: open-preview
 image:
   file: .gitpod.Dockerfile

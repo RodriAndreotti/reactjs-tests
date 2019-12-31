@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 
 class ProductCategoryRow extends React.Component {
@@ -9,7 +10,7 @@ class ProductCategoryRow extends React.Component {
             <tr>
                 <th colspan="2">{categoria}</th>
             </tr>
-        )
+        );
     }
 }
 
@@ -111,6 +112,6 @@ const PRODUTOS = [
 ];
 
 ReactDOM.render(
-    <FilterableProductTable produtos={PRODUTOS} />,
+    (<FilterableProductTable produtos={PRODUTOS} />),
     document.getElementById('container')
 );
