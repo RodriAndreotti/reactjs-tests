@@ -1,6 +1,6 @@
 tasks:
   - init: npm install npm -g 
-  - command:  npm install npm -g && npm install && npm i webpack -g && npm i webpack-cli -g npm i -D webpack-cli && npm run dev
+  - command:  npm install npm -g && npm install && npm i webpack -g && npm i webpack-cli -g && npm run dev
 ports:
   - port: 3000
     onOpen: open-preview

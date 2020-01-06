@@ -12,13 +12,14 @@ module.exports = {
         publicPath: "/js/",
         filename: "app.min.js"
   },
-  module: {
-    resolve: {
-        extensions: ['', '.js', '.jsx', '.css'],
-        modulesDirectories: [
-          'node_modules'
+  resolve: {
+        extensions: ['.js', '.jsx', '.css'],
+        modules: [
+            'node_modules'
         ]        
     },
+  module: {
+    
     rules: [
       {
         test: /\.jsx?$/,
