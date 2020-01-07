@@ -27,7 +27,7 @@
     "webpack-dev-server": "^3.10.1"
   },
   "scripts": {
-    "dev": "webpack-dev-server --host 0.0.0.0 --port 3000 --inline --hot --disable-host-check --history-api-fallback --content-base public",
+    "dev": "webpack-dev-server --host 0.0.0.0 --port 3000 --inline --watch --hot --disable-host-check --history-api-fallback --content-base public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
